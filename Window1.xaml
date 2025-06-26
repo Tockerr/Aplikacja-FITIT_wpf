@@ -1,0 +1,45 @@
+﻿<Window x:Class="WpfApp1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="FITIT" Icon="\Resources_2\ikona.ico" Height="500" Width="750">
+    <Grid x:Name="Main_menu">
+        <Grid.Background>
+            <ImageBrush ImageSource="\Resources_2\Background.png"/>
+        </Grid.Background>
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="170"/>
+            <ColumnDefinition Width="580"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.ColumnSpan="1">
+            <Button BorderThickness="0" Margin="0,50,0,0" Click="Start_Content" Height="35" Width="136">
+                <Image Source="Resources_2\start.png" Width="136" Height="35"  Stretch="Fill" Opacity="1.1" VerticalAlignment="Center" Margin="-1,-1,-1,-1.3"/>
+            </Button>
+            <Button BorderThickness="0" Margin="0,10,0,0" Height="35" Width="136" Click="BMI_Content">
+                <Image Source="Resources_2\bmi.png" Width="136" Height="35"  Stretch="Fill" Opacity="1.1" VerticalAlignment="Center" Margin="-1,-1,-1,-1.3"/>
+            </Button>
+            <Button BorderThickness="0" Margin="0,10,0,0" Height="35" Width="136" Click="Kroki_Content">
+                <Image Source="Resources_2\steps.png" Width="136" Height="35" Stretch="Fill" Opacity="1.1" VerticalAlignment="Center" Margin="-1,-1,-1,-1.3"/>
+            </Button>
+            <Button BorderThickness="0" Margin="0,10,0,0" Height="35" Width="136" Click="Cwiczenia_Content">
+                <Image Source="Resources_2\plan.png" Width="136" Height="35" Stretch="Fill" Opacity="1.1" VerticalAlignment="Center" Margin="-1,-1,-1,-1.3"/>
+            </Button>
+            <Button BorderThickness="0" Margin="0,200,0,0" VerticalAlignment="Top" Height="35" Width="136" Click="Wyloguj_Click">
+                <Image Source="Resources_2\logout.png" Width="136" Height="35" Stretch="Fill" Opacity="1.1" VerticalAlignment="Center" Margin="-1,-1,-1,-1.3"/>
+
+            </Button>
+
+            <StackPanel.Background>
+                <ImageBrush ImageSource="\Resources_2\Column.png"/>
+            </StackPanel.Background>
+        </StackPanel>
+        <ContentControl x:Name="Container" Grid.Column="2"></ContentControl>
+
+    </Grid>
+    
+</Window>

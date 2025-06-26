@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="WpfApp1.Start"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="100">
+            </RowDefinition>
+            <RowDefinition Height="175">
+            </RowDefinition>
+            <RowDefinition Height="175">
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250">
+            </ColumnDefinition>
+            <ColumnDefinition Width="*">
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="\Resources_2\Background.png"/>
+        </Grid.Background>
+        <Label x:Name="Powitanie" Content="tutaj powitanie dla uzytkownika" Grid.Row="0" Grid.Column="0" FontSize="25" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="20" Initialized="Powitanie_Initialized"/>
+        <Label Content="KROKI: " Grid.Row="1" Grid.Column="0" FontSize="40" Margin="50"/>
+        <TextBlock x:Name="Kroki_zawartosc_2" Grid.Row="1" Grid.Column="1" FontSize="25" Text="" Margin="0,87.5,0,0" TextWrapping="Wrap"></TextBlock>
+        <TextBlock x:Name="Kroki_zawartosc" Grid.Row="1" Grid.Column="1" FontSize="30" Text="" Margin="0,40,0,50" TextWrapping="Wrap" Initialized="Kroki_zawartosc_Initialized"></TextBlock>
+
+        <Label Content="BMI: " Grid.Row="2" Grid.Column="0" FontSize="40" Margin="50"/>
+        <TextBlock x:Name="BMI_zawartosc" Grid.Row="2" Grid.Column="1" FontSize="30" Text="" Margin="0,40,0,50" TextWrapping="Wrap"></TextBlock>
+        <TextBlock x:Name="BMI_zawartosc_2" Grid.Row="2" Grid.Column="1" FontSize="25" Text="" Margin="0,87.5,0,0" TextWrapping="Wrap" Initialized="BMI_zawartosc_Initialized" ></TextBlock>
+
+
+
+    </Grid>
+</UserControl>
+
+

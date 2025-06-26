@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="FITIT" Icon="\Resources_2\ikona.ico" Height="500" Width="500">
+    <Grid x:Name="Logowanie" Width="500">
+        <Button x:Name="submit" BorderThickness="0" HorizontalAlignment="Center" Margin="0,390,0,0" VerticalAlignment="Top" Height="35" Width="136" Click="Button_Click">
+            <Image Source="Resources_2\zaloguj.png" Width="136" Height="35"  Stretch="Fill" Opacity="1.1" VerticalAlignment="Center" Margin="-1,-1,-1,-1.3"/>
+        </Button>
+        <Grid Panel.ZIndex="-1">
+            <Grid.Background>
+                <ImageBrush ImageSource="\Resources_2\FITIT.png"/>
+            </Grid.Background>
+            <Label Content="Login" HorizontalAlignment="Left" Margin="119,191,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.502,-0.091" FontWeight="Bold"/>
+            <TextBox x:Name="Input_Login" HorizontalAlignment="Left" Margin="118,217,0,0"  VerticalAlignment="Top" Width="168" Height="21" Background="Black" BorderBrush="Black" Foreground="White" GotFocus="Input_Login_GotFocus" LostFocus="Input_Login_LostFocus"/>
+            <Label Content="Hasło" HorizontalAlignment="Left" Margin="119,297,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <PasswordBox x:Name="Input_Haslo" HorizontalAlignment="Left" Margin="119,323,0,0" VerticalAlignment="Top" Width="168" Height="21" Background="Black" Foreground="White" GotFocus="Input_Haslo_GotFocus" LostFocus="Input_Haslo_LostFocus"/>
+        </Grid>
+    </Grid>
+</Window>
