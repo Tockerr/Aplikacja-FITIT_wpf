@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
@@ -127,7 +128,7 @@ namespace WpfApp1
                     break;
             }
 
-            return baseCalories * (bmi / 25);
+            return Math.Round(baseCalories * (bmi / 25));//zaokrąglanie
         }
     }
 }

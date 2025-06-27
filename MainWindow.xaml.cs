@@ -67,7 +67,7 @@ namespace WpfApp1
                 MessageBox.Show("Coś poszło nie tak "+ ex.Message);
             }
         }
-        private void Input_Login_GotFocus(object sender, RoutedEventArgs e)
+        private void Input_Login_GotFocus(object sender, RoutedEventArgs e) //animacja która usuwa zawartość pola
         {
             if (Input_Login.Text == "Login")
             {
@@ -81,7 +81,7 @@ namespace WpfApp1
                 Input_Haslo.Password = "";
             }
         }
-        private void Input_Login_LostFocus(object sender, RoutedEventArgs e)
+        private void Input_Login_LostFocus(object sender, RoutedEventArgs e) //animacja, gdy user nic nie wpisze, ma pozostać nazwa "login"
         {
             if (Input_Login.Text == "")
             {
