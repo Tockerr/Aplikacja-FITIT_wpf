@@ -2,11 +2,11 @@
 
 FITIT to aplikacja desktopowa stworzona w technologii WPF (Windows Presentation Foundation) w języku C#, która korzysta z interfejsu graficznego oraz prostego systemu plików tekstowych do przechowywania danych.
 Pozwala użytkownikowi:
--logować się przy użyciu loginu i hasła,
--obliczyć wskaźnik BMI i zapisać go do historii,
--tworzyć indywidualny plan treningowy,
--ręcznie zapisywać ilość kroków,
--przeglądać podsumowanie aktywności,
+- logować się przy użyciu loginu i hasła,
+- obliczyć wskaźnik BMI i zapisać go do historii,
+- tworzyć indywidualny plan treningowy,
+- ręcznie zapisywać ilość kroków,
+- przeglądać podsumowanie aktywności,
 
 # Technologie
 
