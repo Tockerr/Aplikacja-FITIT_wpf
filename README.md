@@ -26,13 +26,14 @@ Wymagane jest zainstalowane SDK **.NET 6.0** oraz wsparcie dla aplikacji desktop
 
 # Struktura projektu
 
-App.xaml - 
-BMI.xaml - 
-Cwiczenia.xaml - 
-kroki.xaml - 
-MainWindow.xaml -
-Start.xaml - 
-Window1.xaml -
+BMI.xaml - strona z obliczaniem BMI na podstawie podanej masy oraz wzrostu. Po obliczeniu aplikacja poda stan BMI na podstawie z góry podanych zakresów wartości, czy BMI jest prawidłowe, za wysokie bądź na niskie.
+Cwiczenia.xaml - strona z planowaniem i generowaniem planu treningowego na wydarzenia kliknięcia przycisku. Tworzy plan na podstawie wybranych dni wolnych od ćwiczeń, możliwości treningowych oraz liczby dni treningowych. Zależnie od wartości BMI oraz poziomu trudności,
+oblicza przewidywaną liczbę spalonych kalorii podczas treningu.
+kroki.xaml - strona z wprowadzaniem oraz zapisywaniem podanej liczby zrobionych kroków. Zapisuje w systemie tą wartość wraz z datą danego dnia, w którym liczba została wprowadzona za pomocą przycisku 'DODAJ'.
+MainWindow.xaml - strona główna z logowaniem z walidacją. Żeby zalogować się, trzeba podać poprawny login oraz hasło (Kuba  ,  wsb).
+Start.xaml - main z podsumowaniem ostatnich wprowadzonych danych wraz z aktualizowaniem liczby dni od czasu ostatniej aktualizacji.
+Window1.xaml - nawigadcja boczna do 'kroki', 'bmi', 'main', 'plan'.
+Resources_2 - pliki z grafikami oraz datagrid i data.txt w którym jest podany logim i hasło do aplikacji (Kuba  wsb) wraz z zapisanymi datami.
 
 
 # Licencja
@@ -41,5 +42,5 @@ Projekt stworzony w celach edukacyjnych.
 
 
 # Autorzy:
-Kuba Dąbek
-Mateusz Bywalec
+-Kuba Dąbek
+-Mateusz Bywalec
