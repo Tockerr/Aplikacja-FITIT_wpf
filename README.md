@@ -12,7 +12,7 @@ Pozwala użytkownikowi:
 
 Projekt wykorzystuje:
 - .NET 6.0 (Windows Desktop) – platforma uruchomieniowa,
-- WPF (Windows Presentation Foundation)** – framework do tworzenia interfejsu graficznego,
+- WPF (Windows Presentation Foundation) – framework do tworzenia interfejsu graficznego,
 
 Dane przechowywane są lokalnie w plikach tekstowych (`data.txt`), bez użycia bazy danych.
 
@@ -29,12 +29,67 @@ W celu zalogowania się do aplikacji, należy podać login **"Kuba"** oraz hasł
 # Struktura projektu
 
 - `BMI.xaml` - strona z obliczaniem BMI na podstawie podanej masy oraz wzrostu. Po obliczeniu aplikacja poda stan BMI na podstawie z góry podanych zakresów wartości, czy BMI jest prawidłowe, za wysokie bądź na niskie.
-- `Cwiczenia.xaml` - strona z planowaniem i generowaniem planu treningowego na wydarzenia kliknięcia przycisku. Tworzy plan na podstawie wybranych dni wolnych od ćwiczeń, możliwości treningowych oraz liczby dni treningowych. Zależnie od wartości BMI oraz poziomu trudności,
-  oblicza przewidywaną liczbę spalonych kalorii podczas treningu.
+  Paradygmaty:
+- Enkapsulacja:
+Dane użytkownika (waga, wzrost, BMI) są przechowywane w prywatnych polach lub lokalnych zmiennych.
+Klasy pomocnicze i metody działają na tych danych wewnątrz klasy.
+Abstrakcja:
+Klasa BMI ukrywa szczegóły logiki obliczania BMI – użytkownik widzi tylko wynik, nie sposób jego uzyskania.
+Dziedziczenie:
+`BMI : UserControl` – dziedziczy z kontrolki WPF.
+
+- `Cwiczenia.xaml` - strona z planowaniem i generowaniem planu treningowego na wydarzenia kliknięcia przycisku. Tworzy plan na podstawie wybranych dni wolnych od ćwiczeń, możliwości treningowych oraz liczby dni treningowych. Zależnie od wartości BMI oraz poziomu trudności, oblicza przewidywaną liczbę spalonych kalorii podczas treningu.
+  Paradygmaty:
+- *Enkapsulacja*:
+Klasa wewnętrzna `TrainingPlanItem` przechowuje dane ćwiczeń.
+- *Abstrakcja*:
+Interfejs `Icwiczenia` – deklaruje logikę generowania planu.
+- *Dziedziczenie*:
+`Cwiczenia` : `UserControl`.
+*Polimorfizm*:
+Implementacja interfejsu `Icwiczenia`.
+
 - `kroki.xaml` - strona z wprowadzaniem oraz zapisywaniem podanej liczby zrobionych kroków. Zapisuje w systemie tą wartość wraz z datą danego dnia, w którym liczba została wprowadzona za pomocą przycisku 'DODAJ'.
+  Paradygmaty:
+- *Enkapsulacja*:
+`Vars` przechowuje ścieżkę do pliku, dane, indeksy itd.
+`KrokiData` – model danych dla widoku (ilość kroków i data).
+- *Abstrakcja*:
+Interfejs `Ikroki` z metodami `Plik_conn()` i `Zapis()`.
+- *Dziedziczenie*:
+`kroki : UserControl` – kontrolka WPF.
+- *Polimorfizm*:
+Można użyć instancji klasy przez interfejs `Ikroki`.
+
 - `MainWindow.xaml` - strona główna z logowaniem z walidacją. Żeby zalogować się, trzeba podać poprawny login oraz hasło (Kuba  ,  wsb).
+  Paradygmaty:
+- Enkapsulacja:
+Obsługuje logikę logowania (np. pobieranie nazwy użytkownika), zapisuje dane tylko lokalnie.
+- Abstrakcja:
+Metody jak `Zaloguj_Click` czy `SprawdzLogin()` ukrywają szczegóły działania za prostym przyciskiem.
+- Dziedziczenie:
+`MainWindow : Window` – główne okno aplikacji dziedziczy z Window.
+
 - `Start.xaml` - main z podsumowaniem ostatnich wprowadzonych danych wraz z aktualizowaniem liczby dni od czasu ostatniej aktualizacji.
+  Paradygmaty:
+- *Enkapsulacja*:
+Klasa wewnętrzna `Vars` przechowuje dane lokalne jak `nazwa_uzytkownika`, `data`, `BMI_tab`, `kroki_tab`.
+- *Abstrakcja*:
+Interfejs Istart definiuje metody jak Wypisanie, ReverseString, pozycja_koncowa, oddzielając „co robi” od „jak”.
+- *Dziedziczenie*:
+Start : UserControl – korzysta z funkcjonalności WPF-owego UserControl.
+- *Polimorfizm*:
+Klasa implementuje Istart, może być użyta przez typ interfejsowy.
+
 - `Window1.xaml` - nawigadcja boczna do 'kroki', 'bmi', 'main', 'plan'.
+  Paradygmaty:
+- Enkapsulacja:
+Klasa `Window1` zawiera `TabControl` i ładuje inne widoki (`Start`, `Cwiczenia`, `kroki`, `BMI`), nie udostępniając ich wewnętrznych danych.
+- Abstrakcja:
+Działa jako kontener widoków – użytkownik widzi tylko przełączanie zakładek, nie logikę ich ładowania.
+- Dziedziczenie:
+`Window1 : Window` – własne okno kontenera.
+
 - `Resources_2` - pliki z grafikami oraz datagrid i data.txt w którym jest podany logim i hasło do aplikacji (Kuba  wsb) wraz z zapisanymi datami.
 
 
