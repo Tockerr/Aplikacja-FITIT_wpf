@@ -17,13 +17,11 @@ Projekt wykorzystuje:
 Dane przechowywane są lokalnie w plikach tekstowych (`data.txt`), bez użycia bazy danych.
 
 
-# Uruchamianie:
+# Instalacja:
 
 Projekt można uruchomić w środowisku Visual Studio 2022 lub nowszym.  
 Wymagane jest zainstalowane SDK **.NET 6.0** oraz wsparcie dla aplikacji desktopowych (WPF).
-
-W celu zalogowania się do aplikacji, należy podać login **"Kuba"** oraz hasło **"wsb"**.
-
+W celu zalogowania się do aplikacji, należy podać dane zapisane w pliku `data.txt` na początku - login **"Kuba"** oraz hasło **"wsb"**.
 
 
 # Struktura projektu i paradygmaty
