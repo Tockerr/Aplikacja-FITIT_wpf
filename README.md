@@ -8,7 +8,7 @@ Pozwala użytkownikowi:
 - ręcznie zapisywać ilość kroków,
 - przeglądać podsumowanie aktywności,
 
-# Technologie
+## Technologie
 
 Projekt wykorzystuje:
 - .NET 6.0 (Windows Desktop) – platforma uruchomieniowa,
