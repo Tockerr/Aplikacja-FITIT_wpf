@@ -56,7 +56,7 @@ Opis: strona z planowaniem i generowaniem planu treningowego na wydarzenia klikn
 ## `kroki.xaml` 
 Opis: strona z wprowadzaniem oraz zapisywaniem podanej liczby zrobionych kroków. Zapisuje w systemie tą wartość wraz z datą danego dnia, w którym liczba została wprowadzona za pomocą przycisku 'DODAJ'.
 
-  Paradygmaty:
+  **Paradygmaty:**
 - Enkapsulacja:
   - `Vars` przechowuje ścieżkę do pliku, dane, indeksy itd.
   - `KrokiData` – model danych dla widoku (ilość kroków i data).
@@ -103,7 +103,7 @@ Opis: nawigadcja boczna do 'kroki', 'bmi', 'main', 'plan'.
   - `Window1 : Window` – własne okno kontenera.
 
 ## `Resources_2`  
-Opis: pliki z grafikami oraz `DataGrid` i data.txt(służy do zapisywania i odczytywania danych użytkownika).
+Opis: pliki z grafikami oraz `DataGrid` i `data.txt` (służy do zapisywania i odczytywania danych użytkownika).
 
 
 # Licencja
