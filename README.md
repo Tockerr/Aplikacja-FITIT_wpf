@@ -49,9 +49,9 @@ Opis: strona z planowaniem i generowaniem planu treningowego na wydarzenia klikn
 - Abstrakcja:
   - Interfejs `Icwiczenia` – deklaruje logikę generowania planu.
 - Dziedziczenie:
- -  `Cwiczenia` : `UserControl`.
+  - `Cwiczenia` : `UserControl`.
 - **Polimorfizm**:
- - Implementacja interfejsu `Icwiczenia`.
+  - Implementacja interfejsu `Icwiczenia`.
 
 ## `kroki.xaml` 
 Opis: strona z wprowadzaniem oraz zapisywaniem podanej liczby zrobionych kroków. Zapisuje w systemie tą wartość wraz z datą danego dnia, w którym liczba została wprowadzona za pomocą przycisku 'DODAJ'.
